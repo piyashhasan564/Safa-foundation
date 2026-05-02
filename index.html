@@ -1361,16 +1361,15 @@ footer { background: #111; color: white; text-align: center; padding: 20px; marg
     // ============================================
     // Firebase Setup
     // ============================================
-
-const firebaseConfig = {
-  apiKey: "AIzaSyDk-BX0vHTSO0NLrZHY27OjpjWXz8R3tbw",
-  authDomain: "safa-foundation-b60d6.firebaseapp.com",
-  projectId: "safa-foundation-b60d6",
-  storageBucket: "safa-foundation-b60d6.firebasestorage.app",
-  messagingSenderId: "1035304700038",
-  appId: "1:1035304700038:web:01475ffd2e49737203a907",
-  measurementId: "G-02S64F5HH7"
-};
+    const firebaseConfig = {
+      apiKey: "AIzaSyBihfvgAN3peixT4cygDUJ6QUhzg-kSI0I",
+      authDomain: "safa-foundation.firebaseapp.com",
+      projectId: "safa-foundation",
+      storageBucket: "safa-foundation.firebasestorage.app",
+      messagingSenderId: "757327454641",
+      appId: "1:757327454641:web:7989be63d91bfe29ca9d90",
+      measurementId: "G-H15FVJGS5X"
+    };
     
     firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
@@ -1488,14 +1487,69 @@ function fetchLiveImpact() {
 }
 
  
-// উইন্ডো লোড হওয়ার সময় আগের গুলোর সাথে এটিও কল করুন
-window.addEventListener('load', () => {
+// --- ডাটা ইনস্ট্যান্ট লোড করার জন্য নতুন সিস্টেম ---
+document.addEventListener('DOMContentLoaded', () => {
+    // ১. প্রোফাইল/লগইন চেক (সবার আগে)
     checkAuth();
-    // কোনো Delay ছাড়া সরাসরি কল করুন
+
+    // ২. আগের ক্যাশ (Cache) থেকে ডেটা ইনস্ট্যান্ট দেখানোর লজিক
+    
+    // নোটিশের ক্যাশ চেক
+    const cachedNotice = localStorage.getItem('safa_notice_text');
+    if (cachedNotice) {
+        showNoticeBar(cachedNotice);
+    }
+
+    // ইমপ্যাক্ট মিটারের ক্যাশ চেক
+    const cachedImpact = localStorage.getItem('safa_impact_data');
+    if (cachedImpact) {
+        showImpactMeter(JSON.parse(cachedImpact));
+    }
+
+    // ৩. ব্যাকগ্রাউন্ডে ফায়ারবেস থেকে নতুন ডেটা আনা শুরু করবে
     fetchLivePaymentNumbers();
     fetchLiveNotice();
     fetchLiveImpact();
 });
+
+// --- UI আপডেট করার সাপোর্টিং ফাংশনগুলো ---
+function showNoticeBar(text) {
+    const noticeBar = document.getElementById('notice-bar');
+    const noticeText = document.getElementById('notice-text');
+    const noticeContainer = document.querySelector('.notice-container');
+    
+    if (text && text.trim() !== "") {
+        noticeBar.style.display = 'block';
+        noticeText.innerText = text;
+        
+        setTimeout(() => {
+            const textWidth = noticeText.offsetWidth;
+            const containerWidth = noticeContainer.offsetWidth;
+            const duration = (containerWidth + textWidth) / 50; 
+            noticeText.style.animation = `smooth-scroll ${duration}s linear infinite`;
+        }, 100);
+    } else {
+        noticeBar.style.display = 'none';
+    }
+}
+
+function showImpactMeter(d) {
+    if (!d.show) {
+        document.getElementById('impact-section').style.display = 'none';
+        return;
+    }
+    
+    document.getElementById('impact-section').style.display = 'block';
+    document.getElementById('impact-title').innerText = d.title || "বর্তমান প্রজেক্ট";
+    document.getElementById('impact-goal').innerText = d.goal || 0;
+    document.getElementById('impact-collected').innerText = d.collected || 0;
+
+    let percent = (d.goal > 0) ? (d.collected / d.goal) * 100 : 0;
+    if(percent > 100) percent = 100; 
+    
+    document.getElementById('impact-progress').style.width = percent + "%";
+    document.getElementById('impact-percent').innerText = Math.round(percent) + "%";
+}
 
 
 // থিম কালার আপডেট
