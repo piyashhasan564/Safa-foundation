@@ -7,7 +7,10 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+<!-- ফায়ারবেস সার্ভারের সাথে দ্রুত কানেক্ট হওয়ার জন্য Preconnect -->
+<link rel="preconnect" href="https://firestore.googleapis.com">
+<link rel="preconnect" href="https://www.gstatic.com">
+<link rel="dns-prefetch" href="https://firestore.googleapis.com">
 <!-- Firebase JS SDK -->
 <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
@@ -1369,13 +1372,19 @@ footer { background: #111; color: white; text-align: center; padding: 20px; marg
     };
     
     firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
+const db = firebase.firestore();
 
-    // ডেটা ইনস্ট্যান্ট লোড করার জন্য Cache/Persistence চালু করা
-    db.enablePersistence({ synchronizeTabs: true })
-      .catch(function(err) {
-          console.log("Cache Error: ", err.code);
-      });
+// ইন্টারনেট বা রাউটারে সমস্যা থাকলেও যাতে দ্রুত ডেটা আসে তার জন্য এই সেটিংস
+db.settings({
+    experimentalForceLongPolling: true, // এটি কানেকশন দ্রুত করতে সাহায্য করে
+    useFetchStreams: false
+});
+
+// ক্যাশ চালু করা
+db.enablePersistence({ synchronizeTabs: true })
+  .catch(function(err) {
+      console.log("Cache Error: ", err.code);
+  });
 
 // ১. EmailJS ইনিশিয়ালাইজ করা (স্ক্রিপ্টের শুরুতে একবার দিলেই হবে)
 (function() {
