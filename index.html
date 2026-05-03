@@ -34,8 +34,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<!-- AOS Animation CSS -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 <!-- ফায়ারবেস সার্ভারের সাথে দ্রুত কানেক্ট হওয়ার জন্য Preconnect -->
 <link rel="preconnect" href="https://firestore.googleapis.com">
 <link rel="preconnect" href="https://www.gstatic.com">
@@ -2524,7 +2523,7 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
     <!-- হিরো সেকশন -->
     <div class="hero-section">
         <div class="hero-overlay"></div>
-        <div class="hero-content" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="hero-content">
             <h2 style="min-height: 120px;"><span id="typed-text"></span><span class="typing-cursor">|</span></h2>
             <p>সাফা ফাউন্ডেশন একটি অরাজনৈতিক, অলাভজনক শিক্ষা, দাওয়া ও মানবকল্যাণে নিবেদিত সেবামূলক সরকার-নিবন্ধিত প্রতিষ্ঠান। আসুন, এক হয়ে কাজ করি একটি সুন্দর ও কল্যাণময় সমাজ গড়তে।</p>
             
@@ -2539,7 +2538,7 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
     <div class="home-features">
         
         <!-- কার্ড ১: সহায়তা প্রদান -->
-        <div class="feature-item" data-aos="fade-up" data-aos-delay="0">
+        <div class="feature-item">
             <div class="feature-icon" style="background: linear-gradient(135deg, #FFF3E0, #FFE0B2); color: #F59E0B; box-shadow: 0 10px 20px rgba(245, 158, 11, 0.15);">
                 <i class="fas fa-hand-holding-medical"></i>
             </div>
@@ -2548,7 +2547,7 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
         </div>
 
         <!-- কার্ড ২: শিক্ষা বিস্তার -->
-        <div class="feature-item" data-aos="fade-up" data-aos-delay="150">
+        <div class="feature-item">
             <div class="feature-icon" style="background: linear-gradient(135deg, #DBEAFE, #BFDBFE); color: #2563EB; box-shadow: 0 10px 20px rgba(37, 99, 235, 0.15);">
                 <i class="fas fa-user-graduate"></i>
             </div>
@@ -2557,7 +2556,7 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
         </div>
 
         <!-- কার্ড ৩: স্বেচ্ছাসেবক -->
-        <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="feature-item">
             <div class="feature-icon" style="background: linear-gradient(135deg, #E8F5E9, #C8E6C9); color: #046A38; box-shadow: 0 10px 20px rgba(4, 106, 56, 0.15);">
                 <i class="fas fa-users-cog"></i>
             </div>
@@ -2571,8 +2570,8 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
 <!-- DONATE PAGE -->
 <div id="donate" class="page">
     <div class="page-container">
-        <h2 class="section-title" data-aos="fade-down">দান করুন</h2>
-        <div class="form-container" style="text-align: center;" data-aos="fade-up">
+        <h2 class="section-title">দান করুন</h2>
+        <div class="form-container" style="text-align: center;">
             
             <!-- সাধারণ দাতা ফর্ম (লগইন না থাকলে এটি দেখাবে) -->
 <div id="general-donor-form" style="display:none; margin-bottom: 20px; text-align: left;">
@@ -2665,25 +2664,25 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
             <div id="payment-methods-area" style="display:none;">
     <div>
         <!-- বিকাশ পেমেন্ট -->
-        <button class="payment-btn btn-bkash-pay" onclick="openPaymentModal('bkash_pay')" data-aos="zoom-in" data-aos-delay="0">
+        <button class="payment-btn btn-bkash-pay" onclick="openPaymentModal('bkash_pay')">
             <img loading="lazy" src="https://i.ibb.co.com/bj0mbCrF/1775651225893.png" alt="bKash">
             <span>বিকাশ পেমেন্ট</span>
         </button>
 
         <!-- বিকাশ সেন্ড মানি -->
-        <button class="payment-btn btn-bkash" onclick="openPaymentModal('bkash')" data-aos="zoom-in" data-aos-delay="100">
+        <button class="payment-btn btn-bkash" onclick="openPaymentModal('bkash')">
             <img loading="lazy" src="https://freelogopng.com/images/all_img/1656234745bkash-app-logo-png.png" alt="bKash">
             <span>বিকাশ সেন্ডমানি</span>
         </button>
 
         <!-- নগদ সেন্ড মানি -->
-        <button class="payment-btn btn-nagad" onclick="openPaymentModal('nagad')" data-aos="zoom-in" data-aos-delay="200">
+        <button class="payment-btn btn-nagad" onclick="openPaymentModal('nagad')">
             <img loading="lazy" src="https://freelogopng.com/images/all_img/1679248787Nagad-Logo.png" alt="Nagad">
             <span>নগদ সেন্ডমানি</span>
         </button>
 
         <!-- রকেট সেন্ড মানি -->
-        <button class="payment-btn btn-rocket" onclick="openPaymentModal('rocket')" data-aos="zoom-in" data-aos-delay="300">
+        <button class="payment-btn btn-rocket" onclick="openPaymentModal('rocket')">
             <img loading="lazy" src="https://i.ibb.co.com/7x267kjS/1773517273822.png" alt="Rocket">
             <span>রকেট সেন্ডমানি</span>
         </button>
@@ -2698,7 +2697,7 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
     <div class="page-container" style="max-width: 1100px; margin: auto;">
         
         <!-- প্রিমিয়াম হেডার -->
-        <div style="text-align: center; margin-bottom: 50px;" data-aos="fade-down">
+        <div style="text-align: center; margin-bottom: 50px;">
             <div class="premium-header-icon" style="background: linear-gradient(135deg, #FFF3E0, #FFE0B2); color: #F59E0B;">
                 <i class="fas fa-hands-helping"></i>
             </div>
@@ -2709,7 +2708,7 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
         <div class="premium-work-grid">
             
             <!-- কার্ড ১: শিক্ষা সহায়তা -->
-            <div class="premium-work-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="premium-work-card">
                 <div class="work-card-bg-icon"><i class="fas fa-book-reader"></i></div>
                 <div class="work-icon-box" style="background: linear-gradient(135deg, #DBEAFE, #BFDBFE); color: #2563EB; box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);">
                     <i class="fas fa-book-open"></i>
@@ -2724,7 +2723,7 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
             </div>
 
             <!-- কার্ড ২: চিকিৎসা সহায়তা -->
-            <div class="premium-work-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="premium-work-card">
                 <div class="work-card-bg-icon"><i class="fas fa-stethoscope"></i></div>
                 <div class="work-icon-box" style="background: linear-gradient(135deg, #FFE4E6, #FECDD3); color: #E11D48; box-shadow: 0 10px 20px rgba(225, 29, 72, 0.2);">
                     <i class="fas fa-notes-medical"></i>
@@ -2739,7 +2738,7 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
             </div>
 
             <!-- কার্ড ৩: খাদ্য সহায়তা -->
-            <div class="premium-work-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="premium-work-card">
                 <div class="work-card-bg-icon"><i class="fas fa-box-open"></i></div>
                 <div class="work-icon-box" style="background: linear-gradient(135deg, #E8F5E9, #C8E6C9); color: #046A38; box-shadow: 0 10px 20px rgba(4, 106, 56, 0.2);">
                     <i class="fas fa-hand-holding-heart"></i>
@@ -2762,7 +2761,7 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
     <div class="page-container" style="max-width: 1100px; margin: auto;">
         
         <!-- প্রিমিয়াম হেডার -->
-        <div style="text-align: center; margin-bottom: 20px;" data-aos="fade-down">
+        <div style="text-align: center; margin-bottom: 20px;">
             <div class="premium-header-icon" style="background: linear-gradient(135deg, #E0F2FE, #BAE6FD); color: #0284C7;">
                 <i class="fas fa-info-circle"></i>
             </div>
@@ -2773,7 +2772,7 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
         <div class="premium-about-wrapper">
             
             <!-- বাম পাশ: ছবি ও ব্যাজ -->
-            <div class="about-image-side" data-aos="fade-right">
+            <div class="about-image-side">
                 <img loading="lazy" src="https://i.ibb.co.com/tTSCBKqq/IMG-20260312-164909.png" alt="সাফা ফাউন্ডেশন">
                 <div class="about-image-overlay"></div>
                 
@@ -2785,7 +2784,7 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
             </div>
 
             <!-- ডান পাশ: বিস্তারিত লেখা -->
-            <div class="about-text-side" data-aos="fade-left">
+            <div class="about-text-side">
                 <div class="about-subtitle"><i class="fas fa-star"></i> সাফা ফাউন্ডেশন</div>
                 <h3>একসাথে গড়ি <span>সুন্দর ও কল্যাণময়</span> একটি সমাজ</h3>
                 
@@ -2817,7 +2816,7 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
     <div class="page-container" style="max-width: 1000px; margin: auto;">
         
         <!-- প্রিমিয়াম হেডার -->
-        <div style="text-align: center; margin-bottom: 40px;" data-aos="fade-down">
+        <div style="text-align: center; margin-bottom: 40px;">
             <div class="gallery-header-icon">
                 <i class="fas fa-images"></i>
             </div>
@@ -2826,56 +2825,43 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
         </div>
 
         <!-- ক্যাটাগরি ১: খাদ্য সহায়তা -->
-        <div class="gallery-category" data-aos="fade-up">
+        <div class="gallery-category">
             <h3 class="cat-name"><i class="fas fa-utensils"></i> খাদ্য সহায়তা কার্যক্রম ২০২৪</h3>
             <p class="cat-desc">পবিত্র মাহে রমজান উপলক্ষে অসহায় ও দুস্থ পরিবারগুলোর মাঝে মাসব্যাপী ইফতার ও সেহরি সামগ্রী বিতরণ।</p>
             <div class="cat-grid">
-                
-                <!-- প্রথম ছবি (Delay 0) -->
-                <div class="gallery-img-wrapper" onclick="openLightbox(this)" data-aos="zoom-in" data-aos-delay="0">
+                <!-- ইমেজ র‍্যাপার (ক্লিক ইভেন্ট সহ) -->
+                <div class="gallery-img-wrapper" onclick="openLightbox(this)">
                     <img loading="lazy" src="https://i.ibb.co.com/ymq0TSTg/avatar.jpg" alt="খাদ্য সহায়তা">
                     <div class="gallery-img-overlay"><i class="fas fa-search-plus"></i></div>
                 </div>
-                
-                <!-- দ্বিতীয় ছবি (Delay 100) -->
-                <div class="gallery-img-wrapper" onclick="openLightbox(this)" data-aos="zoom-in" data-aos-delay="100">
+                <div class="gallery-img-wrapper" onclick="openLightbox(this)">
                     <img loading="lazy" src="https://i.ibb.co.com/tTSCBKqq/IMG-20260312-164909.png" alt="খাদ্য সহায়তা">
                     <div class="gallery-img-overlay"><i class="fas fa-search-plus"></i></div>
                 </div>
-                
-                <!-- তৃতীয় ছবি (Delay 200) -->
-                <div class="gallery-img-wrapper" onclick="openLightbox(this)" data-aos="zoom-in" data-aos-delay="200">
+                <div class="gallery-img-wrapper" onclick="openLightbox(this)">
                     <img loading="lazy" src="https://i.ibb.co.com/ymq0TSTg/avatar.jpg" alt="খাদ্য সহায়তা">
                     <div class="gallery-img-overlay"><i class="fas fa-search-plus"></i></div>
                 </div>
-                
-                <!-- চতুর্থ ছবি (Delay 300) -->
-                <div class="gallery-img-wrapper" onclick="openLightbox(this)" data-aos="zoom-in" data-aos-delay="300">
+                <div class="gallery-img-wrapper" onclick="openLightbox(this)">
                     <img loading="lazy" src="https://i.ibb.co.com/tTSCBKqq/IMG-20260312-164909.png" alt="খাদ্য সহায়তা">
                     <div class="gallery-img-overlay"><i class="fas fa-search-plus"></i></div>
                 </div>
-                
             </div>
         </div>
 
         <!-- ক্যাটাগরি ২: শিক্ষা সহায়তা -->
-        <div class="gallery-category" data-aos="fade-up">
+        <div class="gallery-category">
             <h3 class="cat-name"><i class="fas fa-book-open"></i> শিক্ষা উপকরণ বিতরণ</h3>
             <p class="cat-desc">সুবিধাবঞ্চিত শিশুদের মাঝে বই, খাতা এবং প্রয়োজনীয় শিক্ষা সামগ্রী পৌঁছে দেওয়ার আমাদের একটি ক্ষুদ্র প্রয়াস।</p>
             <div class="cat-grid">
-                
-                <!-- প্রথম ছবি (Delay 0) -->
-                <div class="gallery-img-wrapper" onclick="openLightbox(this)" data-aos="zoom-in" data-aos-delay="0">
+                <div class="gallery-img-wrapper" onclick="openLightbox(this)">
                     <img loading="lazy" src="https://i.ibb.co.com/ymq0TSTg/avatar.jpg" alt="শিক্ষা সহায়তা">
                     <div class="gallery-img-overlay"><i class="fas fa-search-plus"></i></div>
                 </div>
-                
-                <!-- দ্বিতীয় ছবি (Delay 100) -->
-                <div class="gallery-img-wrapper" onclick="openLightbox(this)" data-aos="zoom-in" data-aos-delay="100">
+                <div class="gallery-img-wrapper" onclick="openLightbox(this)">
                     <img loading="lazy" src="https://i.ibb.co.com/tTSCBKqq/IMG-20260312-164909.png" alt="শিক্ষা সহায়তা">
                     <div class="gallery-img-overlay"><i class="fas fa-search-plus"></i></div>
                 </div>
-                
             </div>
         </div>
 
@@ -2887,8 +2873,9 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
 <div id="audit" class="page">
     <div class="page-container" style="display: flex; flex-direction: column; align-items: center; padding: 20px 15px;">
         
-        <!-- ছোট্ট ট্যাগ এবং প্রিমিয়াম হেডিং (ওপর থেকে নিচে আসবে) -->
-        <div style="text-align: center; margin-bottom: 30px;" data-aos="fade-down">
+        <!-- ছোট্ট ট্যাগ এবং প্রিমিয়াম হেডিং -->
+        <div style="text-align: center; margin-bottom: 30px;">
+            
             <h2 style="font-size: 30px; color: var(--text-dark); margin: 0; font-weight: 800; letter-spacing: -0.5px;">আর্থিক স্বচ্ছতা</h2>
             <p style="color: var(--text-muted); font-size: 15px; margin-top: 8px; font-weight: 500;">ফাউন্ডেশনের প্রতিটি টাকার হিসাব সবার জন্য উন্মুক্ত</p>
         </div>
@@ -2896,8 +2883,8 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
         <!-- মডার্ন সামারি কার্ডস (Dashboard Widgets) -->
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; width: 100%; max-width: 900px;">
             
-            <!-- কার্ড ১: মোট সংগ্রহ (Delay 0) -->
-            <div style="background: var(--card-bg, #ffffff); padding: 25px; border-radius: 24px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.03); display: flex; align-items: center; gap: 18px; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'" data-aos="zoom-in" data-aos-delay="0">
+            <!-- কার্ড ১: মোট সংগ্রহ -->
+            <div style="background: var(--card-bg, #ffffff); padding: 25px; border-radius: 24px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.03); display: flex; align-items: center; gap: 18px; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
                 <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #D1FAE5, #A7F3D0); color: #059669; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 26px; box-shadow: 0 10px 20px rgba(5, 150, 105, 0.2);">
                     <i class="fas fa-hand-holding-usd"></i>
                 </div>
@@ -2907,8 +2894,8 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
                 </div>
             </div>
 
-            <!-- কার্ড ২: মোট খরচ (Delay 150) -->
-            <div style="background: var(--card-bg, #ffffff); padding: 25px; border-radius: 24px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.03); display: flex; align-items: center; gap: 18px; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'" data-aos="zoom-in" data-aos-delay="150">
+            <!-- কার্ড ২: মোট খরচ -->
+            <div style="background: var(--card-bg, #ffffff); padding: 25px; border-radius: 24px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.03); display: flex; align-items: center; gap: 18px; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
                 <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #FFE4E6, #FECDD3); color: #E11D48; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 10px 20px rgba(225, 29, 72, 0.2);">
                     <i class="fas fa-file-invoice-dollar"></i>
                 </div>
@@ -2918,8 +2905,8 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
                 </div>
             </div>
 
-            <!-- কার্ড ৩: বর্তমান ব্যালেন্স (Delay 300) -->
-            <div style="background: var(--card-bg, #ffffff); padding: 25px; border-radius: 24px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.03); display: flex; align-items: center; gap: 18px; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'" data-aos="zoom-in" data-aos-delay="300">
+            <!-- কার্ড ৩: বর্তমান ব্যালেন্স -->
+            <div style="background: var(--card-bg, #ffffff); padding: 25px; border-radius: 24px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.03); display: flex; align-items: center; gap: 18px; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
                 <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #DBEAFE, #BFDBFE); color: #2563EB; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);">
                     <i class="fas fa-wallet"></i>
                 </div>
@@ -2931,8 +2918,8 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
 
         </div>
 
-        <!-- প্রিমিয়াম টেবিল কার্ড (নিচ থেকে ভেসে উঠবে) -->
-        <div style="margin-top: 35px; width: 100%; max-width: 900px; background: var(--card-bg, #ffffff); border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.03); overflow: hidden;" data-aos="fade-up">
+        <!-- প্রিমিয়াম টেবিল কার্ড -->
+        <div style="margin-top: 35px; width: 100%; max-width: 900px; background: var(--card-bg, #ffffff); border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.03); overflow: hidden;">
             
             <!-- টেবিল হেডার -->
             <div style="padding: 22px 25px; background: rgba(4, 106, 56, 0.03); border-bottom: 1px solid rgba(0,0,0,0.04); display: flex; align-items: center; gap: 12px;">
@@ -2966,8 +2953,8 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
     <!-- পেজ হাইট ফিক্স করা হয়েছে যেন কোনোভাবেই স্ক্রল না হয় -->
     <div class="page-container" style="height: calc(100vh - 90px); display: flex; justify-content: center; align-items: center; padding: 0 15px; overflow: hidden;">
         
-        <!-- সিঙ্গেল প্রিমিয়াম কার্ড (এখানে data-aos="zoom-in" বসানো হয়েছে) -->
-        <div style="width: 100%; max-width: 420px; background: var(--card-bg, #ffffff); border-radius: 32px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15); padding: 35px 25px 25px; text-align: center; position: relative; border: 1px solid rgba(0,0,0,0.04);" data-aos="zoom-in">
+        <!-- সিঙ্গেল প্রিমিয়াম কার্ড -->
+        <div style="width: 100%; max-width: 420px; background: var(--card-bg, #ffffff); border-radius: 32px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15); padding: 35px 25px 25px; text-align: center; position: relative; border: 1px solid rgba(0,0,0,0.04);">
             
             <!-- কার্ডের উপরে ভাসমান (Floating) 3D আইকন -->
             <div style="position: absolute; top: -40px; left: 50%; transform: translateX(-50%); width: 80px; height: 80px; background: linear-gradient(135deg, #0a8249, #10B981); border-radius: 24px; color: white; font-size: 35px; display: flex; align-items: center; justify-content: center; box-shadow: 0 15px 30px rgba(10, 130, 73, 0.4); border: 4px solid var(--bg-color, #F9FAFB);">
@@ -3069,7 +3056,7 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
 <div id="login" class="page">
     <div class="page-container" style="max-width: 480px;"> <!-- লগইন ফর্ম ছোট ও স্মার্ট রাখা হয়েছে -->
         
-        <div class="premium-form-card" data-aos="zoom-in">
+        <div class="premium-form-card">
             <!-- ফর্মের সুন্দর হেডার -->
             <div class="form-header-sec">
                 <div class="header-icon-box" style="background: linear-gradient(135deg, #DBEAFE, #BFDBFE); color: #2563EB; box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);">
@@ -3115,7 +3102,7 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
 <div id="register" class="page">
     <div class="page-container" style="max-width: 850px;"> <!-- ফর্মটি একটু চওড়া করা হয়েছে গ্রিডের জন্য -->
         
-        <div class="premium-form-card" data-aos="fade-up">
+        <div class="premium-form-card">
             <!-- ফর্মের সুন্দর হেডার -->
             <div class="form-header-sec">
                 <div class="header-icon-box"><i class="fas fa-user-shield"></i></div>
@@ -3197,7 +3184,7 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
     <div class="page-container" style="max-width: 800px; padding: 30px 15px;">
         
         <!-- মূল ড্যাশবোর্ড ভিউ -->
-        <div id="profileView" class="premium-profile-wrapper" data-aos="fade-up">
+        <div id="profileView" class="premium-profile-wrapper">
             
             <!-- কভার ও ছবি -->
             <div class="profile-cover"></div>
@@ -3325,8 +3312,8 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
 <footer class="premium-footer">
     <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 50px;">
         
-        <!-- কলাম ১: আমাদের সম্পর্কে (Delay 0) -->
-        <div data-aos="fade-up" data-aos-delay="0">
+        <!-- কলাম ১: আমাদের সম্পর্কে -->
+        <div>
             <h3 class="footer-heading">সাফা ফাউন্ডেশন</h3>
             <p style="color: #9CA3AF; line-height: 1.8; font-size: 15px; text-align: justify; margin-top: 10px;">
                 সাফা ফাউন্ডেশন একটি অরাজনৈতিক ও অলাভজনক সেবামূলক প্রতিষ্ঠান। আমরা শিক্ষা, চিকিৎসা ও খাদ্য সহায়তার মাধ্যমে অসহায় মানুষের পাশে দাঁড়াতে বদ্ধপরিকর। মানবতাই আমাদের মূল ধর্ম।
@@ -3336,11 +3323,12 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
             <div class="footer-social-box">
                 <a href="#" target="_blank" class="footer-social-btn fb-btn"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://wa.me/8801325428923" target="_blank" class="footer-social-btn wa-btn"><i class="fab fa-whatsapp"></i></a>
+                
             </div>
         </div>
 
-        <!-- কলাম ২: দ্রুত লিংক (Delay 150) -->
-        <div data-aos="fade-up" data-aos-delay="150">
+        <!-- কলাম ২: দ্রুত লিংক -->
+        <div>
             <h3 class="footer-heading">প্রয়োজনীয় লিংক</h3>
             <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 10px;">
                 <a onclick="showPage('home', null); window.scrollTo(0,0);" class="footer-link-btn">
@@ -3355,8 +3343,8 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
             </div>
         </div>
 
-        <!-- কলাম ৩: যোগাযোগ (Delay 300) -->
-        <div data-aos="fade-up" data-aos-delay="300">
+        <!-- কলাম ৩: যোগাযোগ -->
+        <div>
             <h3 class="footer-heading">যোগাযোগ করুন</h3>
             <div style="margin-top: 10px;">
                 
@@ -3389,9 +3377,10 @@ body.dark-mode #pwa-install-banner h4 { color: #F8FAFC !important; }
     <div style="border-top: 1px solid rgba(255,255,255,0.05); margin-top: 50px; padding-top: 25px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px;">
         <p style="color: #6B7280; font-size: 14px; margin: 0;">© ২০২৬ সাফা ফাউন্ডেশন | সর্বস্বত্ব সংরক্ষিত।</p>
         
-        <a href="https://piyash-ai.vercel.app/" target="_blank" class="dev-info-pro" id="elegant-dev-link">
-            Developer info
-        </a>
+        <!-- অরিজিনাল লাইনের পরিবর্তে এটি দিন -->
+<a href="https://piyash-ai.vercel.app/" target="_blank" class="dev-info-pro" id="elegant-dev-link">
+    Developer info
+</a>
     </div>
 </footer>
 <!-- ফিক্সড পজিশন আল্ট্রা প্রিমিয়াম সার্টিফিকেট (একদম নিখুঁত ডাউনলোডের জন্য) -->
@@ -3792,31 +3781,20 @@ function handleChoice(type) {
     // ১. যখনই পেজ পরিবর্তন হবে, স্ক্রিন একদম উপরে চলে যাবে
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    // ২. সব পেজ থেকে active ক্লাস সরানো
+    // ২. সব পেজ থেকে active ক্লাস সরানো এবং নির্দিষ্ট পেজে যোগ করা
     document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
-    
     const targetPage = document.getElementById(pageId);
-    if (targetPage) {
-        // [SPA FIX] পেজ শো হওয়ার আগে আগের অ্যানিমেশন ক্লাসগুলো রিমুভ করা
-        targetPage.querySelectorAll('[data-aos]').forEach(el => {
-            el.classList.remove('aos-animate');
-        });
-        
-        targetPage.classList.add("active");
-    }
-
-    // [SPA FIX] পেজটি ব্রাউজারে রেন্ডার হওয়ার পর AOS কে নতুন করে রিফ্রেশ করতে হবে
-    setTimeout(() => {
-        AOS.refreshHard(); // এটি নতুন পেজের হাইট ও পজিশন আবার ক্যালকুলেট করবে
-    }, 150);
+    if (targetPage) targetPage.classList.add("active");
 
     // ৩. নেভিগেশন লিংকে active-link ক্লাস ম্যানেজ করা
     const navLinks = document.querySelectorAll("nav a");
     navLinks.forEach(l => l.classList.remove("active-link"));
 
     if (element) {
+        // যদি মেনু থেকে ক্লিক করা হয়
         element.classList.add("active-link");
     } else {
+        // যদি লোগো বা ফুটার থেকে ক্লিক করা হয়, তবে মেনুর সঠিক লিংকটি খুঁজে হাইলাইট করবে
         navLinks.forEach(link => {
             const onclickAttr = link.getAttribute('onclick');
             if (onclickAttr && onclickAttr.includes(`'${pageId}'`)) {
@@ -3838,40 +3816,49 @@ function handleChoice(type) {
         const paymentArea = document.getElementById('payment-methods-area');
         const generalText = document.getElementById('general-donate-text');
         
+        // শুরুতে পেমেন্ট মেথডগুলো হাইড থাকবে
         if(paymentArea) paymentArea.style.display = 'none';
         if(generalText) generalText.style.display = 'none';
 
         if (currentUser) {
+            // ১. ইউজার লগইন থাকলে গেস্ট ফর্ম লুকানো হবে
             if(genForm) genForm.style.display = 'none'; 
             
+            // ২. ডাটাবেস থেকে লেটেস্ট প্ল্যান চেক করা (অ্যাডমিন আপডেট করলে এখানে ধরা পড়বে)
             db.collection('users').doc(currentUser.phone).get().then(doc => {
                 if (doc.exists) {
                     const data = doc.data();
+                    // যদি মেম্বারের প্ল্যান সেট করা থাকে (ইউজার নিজে করুক বা অ্যাডমিন)
                     if (data.saved_amount && data.saved_plan) {
                         planArea.style.display = 'none';
                         savedArea.style.display = 'block';
                         
                         const planText = data.saved_plan === 'monthly' ? 'মাসিক দান' : 'বার্ষিক দান';
-                        document.getElementById('plan-type-text').innerText = planText;
-                        document.getElementById('saved-plan-amount').innerText = data.saved_amount;
+document.getElementById('plan-type-text').innerText = planText;
+document.getElementById('saved-plan-amount').innerText = data.saved_amount;
                         
+                        // পেমেন্টের জন্য টাকার পরিমাণ সেট করা
                         selectedGlobalAmount = data.saved_amount;
 
+                        // লোকাল ডাটাও আপডেট করে রাখা যাতে প্রোফাইলে ঠিক দেখায়
                         localStorage.setItem('currentUser', JSON.stringify(data));
                         currentUser = data;
                     } else {
+                        // যদি কোনো প্ল্যান সেট করা না থাকে
                         planArea.style.display = 'block';
                         savedArea.style.display = 'none';
-                        resetSelectionUI(); 
+                        resetSelectionUI(); // সিলেকশন বাটনগুলো রিসেট করা
                     }
                 }
             }).catch(e => console.log("Error checking plan:", e));
 
         } else {
+            // ৩. লগইন না থাকলে সাধারণ দাতা ফর্ম দেখানো
             if(planArea) planArea.style.display = 'none';
             if(savedArea) savedArea.style.display = 'none';
             if(genForm) genForm.style.display = 'block'; 
             
+            // ইনপুট ক্লিয়ার করা
             document.getElementById('genName').value = '';
             document.getElementById('genPhone').value = '';
             document.getElementById('genAmount').value = '';
@@ -5743,20 +5730,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 </script>
-<!-- AOS Animation JS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    // উইন্ডো সম্পূর্ণ লোড হওয়ার পর ইনিশিয়ালাইজ হবে
-    window.addEventListener('load', () => {
-        AOS.init({
-            duration: 800, // অ্যানিমেশনের স্পিড
-            offset: 80, // একটু নিচে নামলেই অ্যানিমেশন শুরু হবে
-            once: false, // SPA এর জন্য এটি false রাখলে পেজ চেঞ্জ হলেও বারবার অ্যানিমেশন সুন্দর কাজ করবে
-            easing: 'ease-out-cubic',
-            mirror: true // উপরে স্ক্রল করলেও অ্যানিমেশন রিভার্স হবে
-        });
-    });
 
-</script>
 </body>
 </html> 
